@@ -3,8 +3,8 @@ import java.util.*;
 
 public class TimeMethods {
 
-    public static final int N = 1 << 20;        // 1,048,576
-    public static final int USE = 950000;       // use first 950k
+    public static final int N = 1 << 20;
+    public static final int USE = 950000;
     public static final int REPETITIONS = 30;
 
     /* ================= OPEN HASH (LINEAR PROBING) ================= */
@@ -22,7 +22,7 @@ public class TimeMethods {
 
         OpenHash(int size) {
             m = size;
-            table = new Entry[m + 1];   // indices 1..m
+            table = new Entry[m + 1];
         }
 
         int hash(String key) {
@@ -38,7 +38,7 @@ public class TimeMethods {
                     return;
                 }
                 i++;
-                if (i > m) i = 1;  // wrap around
+                if (i > m) i = 1;  
             }
 
             table[i] = new Entry(key, value);
